@@ -42,6 +42,38 @@ document.getElementById('cash-out-btn').addEventListener('click', function(){
 
         currentBalance.innerText = newbalance;
 
+
+
+
+        const transactioContainer = document.getElementById("transection-container-div");
+
+  const creatNewElement = document.createElement("div");
+
+  creatNewElement.innerHTML = `
+    <div class="transaction-div bg-white rounded-[10px] py-6 px-4">
+
+    <div>
+    <img src="./assets/opt-1.png" alt="">
+    
+    </div>
+
+   <div> Cash Out  $${amount}! Agent: ${agentNumber};
+         at ${new Date()}</div>
+
+        
+
+
+                    
+    </div>
+  
+  
+  
+  `;
+
+  transactioContainer.append(creatNewElement);
+
+
+
         
     }
     else{

@@ -5,7 +5,7 @@ document.getElementById("add-money-btn").addEventListener("click", function(){
 const bankAccount = getValueFromInput("add-money-bank");
 
 if(bankAccount === "Select back"){
-    alert("please select a bank");
+    alert("    ");
     return;
 }
 
@@ -23,7 +23,7 @@ if(bankAccountNumber.length !== 11){
 
 const amount = getValueFromInput("input-amountNumber");
 
-if(amount < 0 || amount === 0){
+if( isNaN(amount) || amount <= 0){
 
     alert("Invalid amount")
     return;
@@ -36,18 +36,46 @@ const newBlaance = getBalance() + Number(amount);
 const pin = getValueFromInput("pinNumber");
 
 if(pin === "1234"){
-    alert(`Add Money successfull from ${bankAccount}`);
+    alert(`Add Money successfull from ${bankAccount}
+         at ${new Date()}`);
 
     setBalance(newBlaance);
-}
 
+  const transactioContainer = document.getElementById("transection-container-div");
+
+  const creatNewElement = document.createElement("div");
+
+  creatNewElement.innerHTML = `
+    <div class="transaction-div bg-white rounded-[10px] py-6 px-4">
+
+    <div>
+    <img src="./assets/opt-1.png" alt="">
+    
+    </div>
+
+   <div>  Money added successfully.<br> Amount:${amount} from ${bankAccount}
+         at ${new Date()}</div>
+
+        
+
+
+                    
+    </div>
+  
+  
+  
+  `;
+
+  transactioContainer.append(creatNewElement);
+
+   
+    }
 else{
     alert("Invalid pin");
     return;
 
     
 }
-
 
 
 })

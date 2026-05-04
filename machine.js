@@ -29,7 +29,7 @@ function setBalance (value){
     const balanceElemnet = document.getElementById("balance");
 
     balanceElemnet.innerText = value;
-    console.log("jhghug");
+    
 
 }
 
@@ -40,9 +40,13 @@ function showOnly (id){
 
     const addMoney = document.getElementById("add-money");
     const cashOut = document.getElementById("cashout");
+    const paybill = document.getElementById("pay-bill");
+     const transaction = document.getElementById("transaction");
 
     addMoney.classList.add("hidden");
     cashOut.classList.add("hidden");
+    paybill.classList.add("hidden");
+     transaction.classList.add("hidden");
 
     const selected = document.getElementById(id);
     selected.classList.remove("hidden");
