@@ -70,12 +70,12 @@
         <!-- hero container -->
        <div class=" container grid grid-cols-3 gap-[16px] w-11/12 mx-auto rounded-lg ">
 
-         <button class="  flex-col h-full py-5 px-6  rounded-[12px] btn btn-soft ">
+         <button onclick="showOnly('add-money')" class="  flex-col h-full py-5 px-6  rounded-[12px] btn btn-soft ">
 
           <div class="w-[24px] mx-auto mb-2">  <img  src="./assets/opt-1.png" alt=""></div>
             <h3 class="text-[14px] text-[#080808] opacity-[70%]">add Money</h3>
         </button>
-         <button class=" flex-col h-full py-5 px-6  rounded-[12px] btn btn-soft ">
+         <button onclick="showOnly('cashout')" class=" flex-col h-full py-5 px-6  rounded-[12px] btn btn-soft ">
 
           <div class="w-[24px] mx-auto mb-2">  <img  src="./assets/opt-2.png" alt=""></div>
             <h3 class="text-[14px] text-[#080808] opacity-[70%]">Cashout</h3>
@@ -108,8 +108,8 @@
 
     </section>
 
-<!-- add money section  -->
-    <section>
+<!-- cashout section -->
+    <section id="cashout" class="pb-[132px] hidden">
 
         <div class="container w-11/12 mx-auto ">
             <h1 class="text-[18px] font-semibold text-[#080808] mb-4 ml-5">Cash Out</h1>
@@ -140,42 +140,59 @@
     </section>
 
 
-    <!-- cashout sectioon -->
+    <!-- add money -->
 
-    <section class="pb-[132px]">
 
-      
-
-        <!-- container -->
+     <section id="add-money"  class=" pb-[132px]">
 
         <div class="container w-11/12 mx-auto ">
-            <h1 class="text-[18px] font-semibold text-[#080808] mb-4 ml-5">Cash Out</h1>
+            <h1 class="text-[18px] font-semibold text-[#080808] mb-4 ml-5">Add Money</h1>
             <fieldset class="fieldset bg-base-100  rounded-[20px] w-[380px]   p-8 mx-auto  ">
+
+
+                 <label class="label text-[#080808] text-[1rem] font-medium
+  ">Select A Bank</label>
+
+                <select id="add-money-bank" class="select   border-none rounded-[32px] bg-base-200">
+  <option disabled selected>Select back</option>
+  <option>DBBL</option>
+  <option>TBBL</option>
+  <option>City Bank</option>
+</select>  <br>
  
 
   <label class="label text-[#080808] text-[1rem] font-medium
-  ">Agent Number</label>
-  <input id="input-Agent-Number" maxlength="11" minlength="11" type="text" class="input border-none rounded-[32px] bg-base-200" placeholder="Enter your Agent number"/>
+  ">Bank Account Number</label>
+  <input id="input-bank-account-Number" maxlength="11" minlength="11" type="text" class="input border-none rounded-[32px] bg-base-200" placeholder="Enter 11 digit account number"/>
   <br>
   <label class="label text-[#080808] text-[1rem] font-medium
-  ">Amount</label>
-  <input id="input-amount" maxlength="11" minlength="11" type="number" class="input border-none rounded-[32px] bg-base-200" placeholder="Enter your Amount"/>
+  ">Amount to Add</label>
+  <input id="input-amountNumber" maxlength="11" minlength="11" type="number" class="input border-none rounded-[32px] bg-base-200" placeholder="Enter your Amount"/>
   <br>
 
   <label class="label text-[#080808] text-[1rem] font-medium
   "> Pin number</label>
-  <input id="pin" maxlength="4" minlength="4" type="password" class="input border-none rounded-[32px] bg-base-200 " placeholder="Enter 4 Digit Pin Number" />
+  <input id="pinNumber" maxlength="4" minlength="4" type="password" class="input border-none rounded-[32px] bg-base-200 " placeholder="Enter 4 Digit Pin Number" />
 
-  <button id="cash-out-btn" class="btn rounded-[32px] bg-primary text-white mt-4">Withdraw Money</button>
+  <button id="add-money-btn" class="btn rounded-[32px] bg-primary text-white mt-4">Add Money</button>
 </fieldset>
 
 
 
         </div>
+
+
     </section>
 
 
+    <script src="./machine.js"></script>
+    <script src="./add-money.js"></script>
     <script src="./cash-out.js"></script>
+
+
+    
+
+
 
 </body>
 </html>
