@@ -9,7 +9,7 @@ document.getElementById("add-money-btn").addEventListener("click", function(){
 const bankAccount = getValueFromInput("add-money-bank");
 
 if(bankAccount === "Select back"){
-    alert("    ");
+    alert("Please select a bank");
     return;
 }
 
