@@ -1,7 +1,8 @@
 document.getElementById('cash-out-btn').addEventListener('click', function(){
 
 
-    
+     const history = document.getElementById("no-history-found");
+      history.classList.add("hidden");
 
     // get agent number
     const inputAgentNumber = document.getElementById('input-Agent-Number');

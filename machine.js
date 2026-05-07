@@ -44,13 +44,15 @@ function showOnly (id){
      const transaction = document.getElementById("transaction");
      const transferMoney = document.getElementById("trasfer-money");
      const bonus = document.getElementById("bonus");
-
+    
     addMoney.classList.add("hidden");
     cashOut.classList.add("hidden");
     paybill.classList.add("hidden");
      transaction.classList.add("hidden");
      transferMoney.classList.add("hidden");
      bonus.classList.add("hidden");
+    
+
 
     const selected = document.getElementById(id);
     selected.classList.remove("hidden");
