@@ -41,6 +41,11 @@ if(pin === "1234"){
 
     setBalance(newBlaance);
 
+    emty("pinNumber");
+    emty("input-amountNumber");
+    emty("input-bank-account-Number");
+    emty("add-money-bank");
+
   const transactioContainer = document.getElementById("transection-container-div");
 
   const creatNewElement = document.createElement("div");

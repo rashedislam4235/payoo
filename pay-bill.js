@@ -29,6 +29,11 @@ if(pinumber === "1234"){
     alert(`Pay bill successfull from ${ bankAccountPay}`);
     setBalance(newBlaanceAfterPay);
 
+    emty("pinNumber-pay");
+    emty("input-amount-payNumber-pay");
+    emty("input-bank-account-Number-pay");
+    emty("add-momey-bill");
+
 
 
     const transactioContainer = document.getElementById("transection-container-div");

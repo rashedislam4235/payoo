@@ -41,8 +41,12 @@ document.getElementById('cash-out-btn').addEventListener('click', function(){
         alert('cashout successfull');
 
         currentBalance.innerText = newbalance;
-
-
+        
+        emty("input-Agent-Number");
+        emty("input-amount");
+        emty("pin");
+        
+        
 
 
         const transactioContainer = document.getElementById("transection-container-div");
