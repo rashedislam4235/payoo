@@ -1,5 +1,9 @@
 document.getElementById("add-money-btn").addEventListener("click", function(){
 
+     const history = document.getElementById("no-history-found");
+      history.classList.add("hidden");
+
+
 // bank account get
 
 const bankAccount = getValueFromInput("add-money-bank");

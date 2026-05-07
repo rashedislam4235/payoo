@@ -1,5 +1,11 @@
 document.getElementById("pay-bill-btn").addEventListener("click", function(){
 
+
+
+     const history = document.getElementById("no-history-found");
+      history.classList.add("hidden");
+
+
 const bankAccountPay = getValueFromInput("add-momey-bill");
 if(bankAccountPay === "Select back"){
     alert("please select a bank");

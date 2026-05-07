@@ -1,5 +1,10 @@
 document.getElementById("transfer-money-btn").addEventListener("click", function (){
 
+
+     const history = document.getElementById("no-history-found");
+      history.classList.add("hidden");
+
+
 const userAccountNumbers = getValueFromInput("input-userAccount-Number");
   if(userAccountNumbers.length !=11){
 
